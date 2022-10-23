@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: solid 1px red; */
+}
+
+body {
+    text-align: center;
+    font-family: "Italiana", serif;
+    font-weight: 400;
+}
+
+/* =================
+   Typography 
+   ================= */
+
+h2 {
+    font-size: 2.5rem;
+}
+
+/* =================
+   Header section
+   ================= */
+
+.container {
+    width: inherit;
+    height: 100vh;
+    background-color: #fff;
+    margin: 0 auto 50px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-div {
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.35)),
+        url(/images/banner.jpg);
+    background-size: cover;
+    background-position: 0% 55%;
+    background-color: #404040;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-left: 100px;
+}
+
+/* =================
+   Main-content section 
+   ================= */
+
+.subtitle {
+    margin-bottom: 25px;
+}
+
+.banner-div > h1 {
+    color: #fff;
+    font-size: 6rem;
+    font-weight: 400;
+}
+.banner-div > h3 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.product-gallery {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.product {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.product-img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.product-description {
+    width: 65%;
+    text-align: left;
+}
+
+.shop-btn {
+    height: 25%;
+    background: none;
+    margin: auto 0;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-weight: 700;
+}
+
+/* =================
+   Order section
+   ================= */
+
+.order-container {
+    width: 35%;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.order-title {
+    margin-bottom: 50px;
+}
+
+.order-total-price {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid black;
+    padding-top: 14px;
+    margin-bottom: 25px;
+}
+
+.order-product {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-product-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.remove-btn {
+    margin-left: 5px;
+    color: #bbbbbb;
+    border: none;
+    background-color: transparent;
+}
+
+.order-complete-btn {
+    width: 100%;
+    color: #fff;
+    background-color: black;
+    border: none;
+    padding: 10px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+/* =================
+   Helpers
+   ================= */
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
