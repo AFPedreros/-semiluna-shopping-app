@@ -48,13 +48,27 @@ const addShopEvents = () => {
     }
 }
 
+const addRemoveEvent = (product) => {
+    const btn = document.getElementById(`${product.id}-remove-btn`)
+    btn.addEventListener("click", () => {
+        document.getElementById(`${product.id}-order-product`).remove()
+        document.getElementById(`${product.id}-shop-btn`).disabled = false
+
+        totalPrice -= product.price
+        document.getElementById("total-price").innerText = `$${totalPrice}.00`
+
+        renderOrder()
+    })
+}
+
 const addProductToOrder = (product) => {
     let div = document.createElement("div")
     div.className = "order-product"
+    div.setAttribute("id", `${product.id}-order-product`)
     div.innerHTML = `
         <div class="order-product-name">
             <h3>${product.name}</h3>
-            <button class="remove-btn">remove</button>
+            <button id="${product.id}-remove-btn" class="remove-btn">remove</button>
         </div>
         <p>$${product.price}.00</p>
     `
@@ -62,12 +76,13 @@ const addProductToOrder = (product) => {
     totalPrice += product.price
     document.getElementById("total-price").innerText = `$${totalPrice}.00`
 
+    addRemoveEvent(product)
     renderOrder()
 }
 
 document.getElementById("order-complete-btn").addEventListener("click", () => {
-    totalPrice = 0
-    render()
+    // totalPrice = 0
+    // render()
 })
 
 render()
