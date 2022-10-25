@@ -2,6 +2,10 @@ import products from "./data.js"
 
 let totalPrice = 0
 const orderContainer = document.getElementById("order-container")
+const successSale = document.getElementById("success-sale")
+const modal = document.getElementById("modal")
+
+const modalBtn = document.getElementById("modal-btn")
 
 //* Render the products cards and add the event listener for the shop buttons
 const render = () => {
@@ -39,6 +43,7 @@ const addShopEvents = () => {
         btn.addEventListener("click", () => {
             addProductToOrder(product)
             btn.disabled = true
+            successSale.classList.remove("show")
         })
     }
 }
@@ -84,8 +89,36 @@ const addRemoveEvent = (product) => {
 }
 
 document.getElementById("order-complete-btn").addEventListener("click", () => {
-    // totalPrice = 0
-    // render()
+    modal.classList.add("show")
 })
+
+modal.addEventListener("submit", (e) => {
+    e.preventDefault()
+    const consentFormData = new FormData(modal)
+    const name = consentFormData.get("name")
+    modal.classList.remove("show")
+
+    totalPrice = 0
+    for (let product of products) {
+        let div = document.getElementById(`${product.id}-order-product`)
+        if (div) {
+            div.remove()
+        }
+        document.getElementById(`${product.id}-shop-btn`).disabled = false
+    }
+    renderSuccessSale(name)
+
+    modal.reset()
+})
+
+const renderSuccessSale = (name) => {
+    orderContainer.classList.remove("show")
+    successSale.classList.add("show")
+    const p = document.createElement("p")
+    p.className = "success-sale-text"
+    p.innerText = `Thanks ${name}! Your order will be shipping soon`
+
+    successSale.appendChild(p)
+}
 
 render()

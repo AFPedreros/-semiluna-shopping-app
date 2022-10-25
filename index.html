@@ -28,7 +28,6 @@
         <!-- ORDER SECTION -->
         <div id="order-container" class="order-container hide">
             <h2 id="order-title" class="order-title">Your order</h2>
-            <div class="order-product"></div>
             <div class="order-total-price">
                 <h3>Total price:</h3>
                 <p id="total-price"></p>
@@ -37,6 +36,30 @@
                 Complete Order
             </button>
         </div>
+        <div id="success-sale" class="success-sale hide"></div>
+        <form id="modal" class="modal hide">
+            <h2 class="modal-title">Enter card details</h2>
+            <input
+                class="modal-input-name"
+                name="name"
+                type="text"
+                placeholder="Enter your name"
+                required
+            />
+            <input
+                class="modal-input-card"
+                type="text"
+                placeholder="Enter card number"
+                required
+            />
+            <input
+                class="modal-input-cvv"
+                type="text"
+                placeholder="Enter CVV"
+                required
+            />
+            <button id="modal-btn" class="modal-btn">Pay</button>
+        </form>
         <script src="main.js" type="module"></script>
     </body>
 </html>

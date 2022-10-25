@@ -11,6 +11,7 @@ body {
     text-align: center;
     font-family: "Italiana", serif;
     font-weight: 400;
+    position: relative;
 }
 
 /* =================
@@ -108,6 +109,7 @@ h2 {
     padding: 5px 15px;
     border-radius: 3px;
     font-weight: 700;
+    font-family: "Italiana", serif;
 }
 
 /* =================
@@ -149,7 +151,8 @@ h2 {
     background-color: transparent;
 }
 
-.order-complete-btn {
+.order-complete-btn,
+.modal-btn {
     width: 100%;
     color: #fff;
     background-color: black;
@@ -158,6 +161,67 @@ h2 {
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     border-radius: 3px;
     font-size: 1rem;
+    font-family: "Italiana", serif;
+}
+
+/* =================
+   Success sale
+   ================= */
+
+.success-sale {
+    width: 80%;
+    height: 120px;
+    background-color: #ecfdf5;
+    margin: 0 auto 50px auto;
+    border-radius: 3px;
+    padding: 45px;
+}
+
+.success-sale-text {
+    font-size: 1.25rem;
+    color: #065f46;
+}
+
+/* =================
+   Modal
+   ================= */
+
+.modal {
+    width: 520px;
+    height: 540px;
+    background: #fff;
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-top: -280px;
+    margin-left: -260px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 24px;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    margin-top: 47px;
+}
+
+.modal-input-name,
+.modal-input-card,
+.modal-input-cvv {
+    width: 100%;
+    height: 70px;
+    margin-top: 24px;
+    text-indent: 20px;
+    color: #757575;
+    font-size: 1rem;
+    font-family: "Italiana", serif;
+}
+
+.modal-btn {
+    margin-top: 48px;
+    height: 70px;
 }
 
 /* =================
