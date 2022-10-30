@@ -1,6 +1,6 @@
-import { earrings } from "./images/topos-colombia.jpg"
-import { necklace } from "./images/collar-colombia.jpg"
-import { bookmark } from "./images/separador-mariposa.jpg"
+import earrings from "./images/topos-colombia.jpg"
+import necklace from "./images/collar-colombia.jpg"
+import bookmark from "./images/separador-mariposa.jpg"
 
 const products = [
     {
@@ -21,8 +21,8 @@ const products = [
         name: "Colombia earrings",
         id: 2,
         price: 139,
-        img: earrings,
-        alt: "Topos de Colombia",
+        img: "./images/topos-colombia.jpg",
+        alt: earrings,
     },
 ]
 
