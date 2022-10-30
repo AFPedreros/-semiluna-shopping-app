@@ -21,8 +21,8 @@ const products = [
         name: "Colombia earrings",
         id: 2,
         price: 139,
-        img: "./images/topos-colombia.jpg",
-        alt: earrings,
+        img: earrings,
+        alt: "Topos de Colombia",
     },
 ]
 
